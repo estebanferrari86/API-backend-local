@@ -1,0 +1,46 @@
+GET http://localhost:8000/categoria
+
+###
+GET http://localhost:8000/categoria/1
+
+###
+DELETE http://localhost:8000/categoria/2
+
+###
+GET http://localhost:8000/categoria/2
+
+###
+GET http://localhost:8000/categoria?title=Memorias RAM
+###
+GET http://localhost:8000/categoria?content=2GB
+###
+GET http://localhost:8000/categoria?title=Memorias RAM&content=2GB
+
+###
+GET http://localhost:8000/categoria?multitle=Procesadores,Memorias RAM
+
+###
+GET http://localhost:8000/categoria?search=Memorias RAM
+
+###
+GET http://localhost:8000/categoria?multisearch=Memorias RAM,Procesadores
+###
+
+POST http://127.0.0.1:8000/categoria
+Content-Type: application/json 
+
+{
+  "id" : 99,
+  "title" : "Monitores",
+  "content" : "LED, QLED y ademas"
+}
+
+###
+PUT http://127.0.0.1:8000/categoria/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title" : "Pantallas",
+  "content" : "Planas"
+}
