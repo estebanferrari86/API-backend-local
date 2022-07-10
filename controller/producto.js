@@ -25,10 +25,16 @@ router.get("/:id", (req, res) => {
 //POST funcionando sin usuario logueado
 router.post("/", (req, res) => {
   
-  const body = { ...req.body, id: uuidv4() };
+  const body = { ...req.body, id: getRandomInt(1, 1000000)};
   dao.save(body);
   res.status(200).json(body);
 });
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
 
 
 // POST funcionando con usuario logueado

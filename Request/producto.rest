@@ -12,8 +12,16 @@ GET http://localhost:8000/producto/1
 
 ###
 GET http://localhost:8000/producto?nombre=AMD
+
 ###
 GET http://localhost:8000/producto?modelo=Msi
+
+###
+GET http://localhost:8000/producto?precio=28999
+
+###
+GET http://localhost:8000/producto?descripcion=28999
+
 ###
 GET http://localhost:8000/producto?descripcion=ryzen&modelo=geforce
 
@@ -30,10 +38,10 @@ GET http://localhost:8000/producto?search=asus
 GET http://localhost:8000/producto?multisearch=procesador,amd
 
 ###
-POST http://localhost:8000/producto/
+POST http://localhost:8000/producto
 Content-Type: application/json
   {
-    "id": 5,
+    "id": null,
     "nombre": "Memoria Ram DDR3 - 8Gb 1600 Mhz Beast Kingston Fury",
     "precio": 14719,
     "activo": false,
@@ -43,64 +51,14 @@ Content-Type: application/json
   }
 
 ###
-PUT http://localhost:8000/producto/5
+PUT http://localhost:8000/producto/####
 Content-Type: application/json
   {
-    "id": 999,
-    "nombre": "Memoria Ram DDR3 - 8Gb 1600 Mhz Beast Kingston Fury",
+    "id": 4,
+    "nombre": "RAMBOOOOOOOOOOOOOOO",
     "precio": 14000,
     "activo": false,
     "descripcion": "Memoria Ram DDR3 - 8Gb 1600 Mhz Beast Kingston Fury Kingston Fury DDR3 - 8Gb 1600 Mhz",
     "modelo": "Kingston Fury DDR3 - 8Gb 1600 Mhz",
     "foto": "https://mexx-img-2019.s3.amazonaws.com/40924_1.jpeg"
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-GET http://localhost:8000/objeto
-
-###
-GET http://localhost:8000/objeto/2365108b-7ed3-4ea2-a931-f46769e30417
-
-###
-DELETE http://localhost:8000/objeto/2
-
-###
-GET http://localhost:8000/objeto/2
-
-###
-GET http://localhost:8000/objeto?title=Java
-###
-GET http://localhost:8000/objeto?content=jdbc
-###
-GET http://localhost:8000/objeto?title=Java&content=jdbc
-
-###
-GET http://localhost:8000/objeto
-
-###
-GET http://localhost:8000/objeto?multitle=Java,PHP
-
-###
-GET http://localhost:8000/objeto?search=java
-
-###
-GET http://localhost:8000/objeto?multisearch=java,PHP
-

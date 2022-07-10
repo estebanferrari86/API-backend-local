@@ -39,33 +39,25 @@ let Producto = [
 
 const getAll = (filter) => { 
   let filtrado = Producto;
-  
-  if(filter.nombre){
-    filtrado = filtrado.filter(p => p.nombre === filter.nombre)
-  }
 
   if(filter.precio){
     filtrado = filtrado.filter(p => p.precio == filter.precio)
   }
 
   if(filter.nombre){
-    filtrado = filtrado.filter (p => p.nombre.includes(filter.nombre))
+    filtrado = filtrado.filter(p => p.nombre.search(filter.nombre) > -1)
   }
 
   if(filter.modelo){
-    filtrado = filtrado.filter (p => p.modelo.includes(filter.modelo))
+    filtrado = filtrado.filter(p => p.modelo.search(filter.modelo) > -1)
   }
 
-  if(filter.multitle){
-    filtrado = filtrado.filter(p => filter.multitle.split(',').includes(p.nombre))
+  if(filter.descripcion){
+    filtrado = filtrado.filter(p => p.descripcion.search(filter.descripcion) > -1)
   }
-
- /*  if(filter.multitleModelo){
-    filtrado = filtrado.filter(p => filter.multitle.split(',').includes(e.modelo))
-  } */
 
   if(filter.search){
-    filtrado = filtrado.filter(p => p.nombre.includes(filter.search) || p.descripcion.includes(filter.search))
+    filtrado = filtrado.filter(p => p.nombre.search(filter.search) > -1 || p.descripcion.search(filter.search) > -1)
   }
 
   if(filter.multisearch){
@@ -76,9 +68,8 @@ const getAll = (filter) => {
     })
   }
   
-
   return filtrado
-};
+}
 
 const getOne = (id) => { return Producto.find((registro) => registro.id == id);}
 
@@ -93,10 +84,10 @@ const borrar = (id) => {
   return false
 }
 
-const update = (id) => { 
+const update = (id, body) => { 
   const index = Producto.findIndex((registro) => registro.id == id);
   if (index >= 0) {
-    Producto[index] = req.body;
+    Producto[index] = body;
     return true
   } 
   return false
