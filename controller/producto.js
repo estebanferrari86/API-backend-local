@@ -40,7 +40,7 @@ function getRandomInt(min, max) {
 // POST funcionando con usuario logueado
 /* router.post("/", middleware.validarUserLogin, (req, res) => {
   
-  const body = { ...req.body, id: uuidv4(), user: req.user };
+  const body = { ...req.body, id:etRandomInt(1, 1000000), user: req.user };
   dao.save(body);
   res.status(200).json(body);
 }); */
