@@ -10,20 +10,37 @@ DELETE http://localhost:8000/categoria/2
 GET http://localhost:8000/categoria/2
 
 ###
-GET http://localhost:8000/categoria?title=Java
+GET http://localhost:8000/categoria?title=Memorias RAM
 ###
-GET http://localhost:8000/categoria?content=jdbc
+GET http://localhost:8000/categoria?content=2GB
 ###
-GET http://localhost:8000/categoria?title=Java&content=jdbc
+GET http://localhost:8000/categoria?title=Memorias RAM&content=2GB
 
 ###
-GET http://localhost:8000/objeto
+GET http://localhost:8000/categoria?multitle=Procesadores,Memorias RAM
 
 ###
-GET http://localhost:8000/objeto?multitle=Java,PHP
+GET http://localhost:8000/categoria?search=Memorias RAM
 
 ###
-GET http://localhost:8000/objeto?search=java
+GET http://localhost:8000/categoria?multisearch=Memorias RAM,Procesadores
+###
+
+POST http://127.0.0.1:8000/categoria
+Content-Type: application/json 
+
+{
+  "id" : 99,
+  "title" : "Monitores",
+  "content" : "LED, QLED y ademas"
+}
 
 ###
-GET http://localhost:8000/objeto?multisearch=java,PHP
+PUT http://127.0.0.1:8000/categoria/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title" : "Pantallas",
+  "content" : "Planas"
+}

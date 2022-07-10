@@ -41,11 +41,11 @@ router.post("/", middleware.validarUserLogin, (req, res) => {
 });
 
 // Borrar un elemento 
-router.delete("/:id", (req, res) => {
+/*router.delete("/:id", (req, res) => {
     const id = req.params.id;
     categoria = categoria.filter((registro) => registro.id != id);
     res.sendStatus(201);
-});
+}); */
 
 router.delete("/:id", (req, res) => {
     const id = req.params.id;

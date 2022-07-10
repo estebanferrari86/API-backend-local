@@ -79,7 +79,7 @@ const borrar = (id) => {
     return false
 }
 
-const update = (id) => {
+const update = (id, req) => {
     const index = Categoria.findIndex((registro) => registro.id == id);
     if (index >= 0) {
         Categoria[index] = req.body;
