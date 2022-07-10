@@ -2,7 +2,7 @@ const { v4: uuidv4 } = require("uuid");
 const middleware = require('../utils/middleware');
 
 const router = require("express").Router();
-let dao = require("../dataccess/entry");
+let dao = require("../dataccess/mediopago");
 
 /* Obtener todo */
 router.get("/", (req, res) => {
@@ -22,7 +22,6 @@ router.get("/:id", (req, res) => {
 });
 
 /* Agregar un elemento */
-
 // POST funcionando sin usuario logueado
 router.post("/", (req, res) => {
 
@@ -30,6 +29,7 @@ router.post("/", (req, res) => {
     dao.save(body);
     res.status(200).json(body);
 });
+
 
 // POST funcionando con usuario logueado
 // router.post("/", middleware.validarUserLogin, (req, res) => {
@@ -60,8 +60,8 @@ router.delete("/:id", (req, res) => {
 router.put("/:id", (req, res) => {
     const id = req.params.id;
 
-    // const body = {...req.body, id, user: req.user };
-    // dao.save(body);
+    const body = {...req.body, id, user: req.user };
+    dao.save(body);
     if (dao.update(id, req.body)) {
         res.sendStatus(202);
     } else {

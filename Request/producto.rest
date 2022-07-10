@@ -1,0 +1,64 @@
+
+GET http://localhost:8000/producto
+
+###
+GET http://localhost:8000/producto/1
+
+###
+DELETE http://localhost:8000/producto/2
+
+###
+GET http://localhost:8000/producto/1
+
+###
+GET http://localhost:8000/producto?nombre=AMD
+
+###
+GET http://localhost:8000/producto?modelo=Msi
+
+###
+GET http://localhost:8000/producto?precio=28999
+
+###
+GET http://localhost:8000/producto?descripcion=28999
+
+###
+GET http://localhost:8000/producto?descripcion=ryzen&modelo=geforce
+
+###
+GET http://localhost:8000/producto?multitle=GeForce,GT,1030
+
+###
+GET http://localhost:8000/producto?multitleModelo=procesador,5700
+
+###
+GET http://localhost:8000/producto?search=asus
+
+###
+GET http://localhost:8000/producto?multisearch=procesador,amd
+
+###
+POST http://localhost:8000/producto
+Content-Type: application/json
+  {
+    "id": null,
+    "nombre": "Memoria Ram DDR3 - 8Gb 1600 Mhz Beast Kingston Fury",
+    "precio": 14719,
+    "activo": false,
+    "descripcion": "Memoria Ram DDR3 - 8Gb 1600 Mhz Beast Kingston Fury Kingston Fury DDR3 - 8Gb 1600 Mhz",
+    "modelo": "Kingston Fury DDR3 - 8Gb 1600 Mhz",
+    "foto": "https://mexx-img-2019.s3.amazonaws.com/40924_1.jpeg"
+  }
+
+###
+PUT http://localhost:8000/producto/####
+Content-Type: application/json
+  {
+    "id": 4,
+    "nombre": "RAMBOOOOOOOOOOOOOOO",
+    "precio": 14000,
+    "activo": false,
+    "descripcion": "Memoria Ram DDR3 - 8Gb 1600 Mhz Beast Kingston Fury Kingston Fury DDR3 - 8Gb 1600 Mhz",
+    "modelo": "Kingston Fury DDR3 - 8Gb 1600 Mhz",
+    "foto": "https://mexx-img-2019.s3.amazonaws.com/40924_1.jpeg"
+  }

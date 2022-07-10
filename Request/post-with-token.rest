@@ -13,6 +13,7 @@ Content-Type: application/json
 Authorization: Bearer {{ login.response.body.token }}
 
 {
-  "title" : "primer post",
+  "title" : "tercer post",
   "content" : "mucho bla bla bla"
 }
+

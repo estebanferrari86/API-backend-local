@@ -1,0 +1,68 @@
+# @name login
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username":"admin",
+  "password":"123456"
+}
+
+###
+GET http://localhost:8000/mediopago/
+
+###
+GET http://localhost:8000/mediopago/d093da87-796c-4e36-b60a-693a388ce584
+
+###
+GET http://localhost:8000/mediopago/4
+
+###
+GET http://localhost:8000/mediopago?title=Debito
+
+###
+GET http://localhost:8000/mediopago?title=Crypto
+
+###
+GET http://localhost:8000/mediopago?multitle=Crypto,PHP
+
+###
+GET http://localhost:8000/mediopago?search=it
+
+###
+GET http://localhost:8000/mediopago?multisearch=ola
+
+
+###
+POST http://127.0.0.1:8000/mediopago
+Content-Type: application/json 
+
+{
+  "id": 5,
+  "title" : "Efectivo"
+}
+
+###
+PUT http://localhost:8000/mediopago/4
+Content-Type: application/json
+
+{
+  "id": 4,
+  "title" : "Pete"
+}
+
+###
+POST http://127.0.0.1:8000/mediopago
+Content-Type: application/json
+Authorization: Bearer {{ login.response.body.token }}
+
+{
+  "id": 6,
+  "title" : "Petereke"
+}
+
+### DELETE
+DELETE http://localhost:8000/mediopago/7abe4590-5f70-4a88-9e2d-8444ef7be55f
+
+
+
+
