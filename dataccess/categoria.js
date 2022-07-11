@@ -1,38 +1,15 @@
 let Categoria = [{
         id: 1,
-        title: "Placas",
-        content: "Placas de video, Motherboards, Placas de sonido y mucho mas",
+        title: "Placas"
     },
     {
         id: 2,
-        title: "Procesadores",
-        content: "Pentium, Core, Celeron, Ryzen y mas",
+        title: "Procesadores"
     },
     {
         id: 3,
-        title: "Memorias RAM",
-        content: "2GB, 4GB, 8GB, 16GB",
-    },
-    {
-        id: 4,
-        title: "Coolers y ventiladores",
-        content: "Coolers para PC y laptops",
-    },
-    {
-        id: 5,
-        title: "Discos y Accesorios",
-        content: "Discos Rigidos, SSDs y Accesorios",
-    },
-    {
-        id: 6,
-        title: "Fuentes de alimentacion",
-        content: "Fuentes, Cables de alimentacion, Testers para Fuentes de Poder y mas",
-    },
-    {
-        id: 7,
-        title: "Gabinetes de PC y Soportes",
-        content: "Gabinetes y soportes para CPU",
-    },
+        title: "Memorias RAM"
+    }
 ];
 
 const getAll = (filter) => {
@@ -79,10 +56,10 @@ const borrar = (id) => {
     return false
 }
 
-const update = (id, req) => {
+const update = (id, body) => {
     const index = Categoria.findIndex((registro) => registro.id == id);
     if (index >= 0) {
-        Categoria[index] = req.body;
+        Categoria[index] = body;
         return true
     }
     return false

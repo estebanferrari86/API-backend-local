@@ -1,6 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
 const middleware = require('../utils/middleware');
-
 const router = require("express").Router();
 let dao = require("../dataccess/mediopago");
 
@@ -25,7 +24,7 @@ router.get("/:id", (req, res) => {
 // POST funcionando sin usuario logueado
 router.post("/", (req, res) => {
 
-    const body = {...req.body, id: uuidv4() };
+    const body = {...req.body, id: middleware.getRandomInt(1, 100000)};
     dao.save(body);
     res.status(200).json(body);
 });

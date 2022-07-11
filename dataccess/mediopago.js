@@ -56,10 +56,10 @@ const borrar = (id) => {
     return false
 }
 
-const update = (id) => {
+const update = (id, body) => {
     const index = Entry.findIndex((registro) => registro.id == id);
     if (index >= 0) {
-        Entry[index] = req.body;
+        Entry[index] = body;
         return true
     }
     return false

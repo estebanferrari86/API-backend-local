@@ -1,12 +1,3 @@
-# @name login
-POST http://localhost:8000/login
-Content-Type: application/json
-
-{
-  "username":"admin",
-  "password":"123456"
-}
-
 ###
 GET http://localhost:8000/mediopago/
 
@@ -61,7 +52,7 @@ Authorization: Bearer {{ login.response.body.token }}
 }
 
 ### DELETE
-DELETE http://localhost:8000/mediopago/7abe4590-5f70-4a88-9e2d-8444ef7be55f
+DELETE http://localhost:8000/mediopago/1
 
 
 

@@ -31,8 +31,7 @@ Content-Type: application/json
 
 {
   "id" : 99,
-  "title" : "Monitores",
-  "content" : "LED, QLED y ademas"
+  "title" : "Monitores"
 }
 
 ###
@@ -41,6 +40,4 @@ Content-Type: application/json
 
 {
   "id": 2,
-  "title" : "Pantallas",
-  "content" : "Planas"
-}
+  "title" : "Pantallas"}
