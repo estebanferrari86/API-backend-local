@@ -6,7 +6,7 @@ const categoriaController = require("./controller/categoria");
 const productoController = require("./controller/producto");
 const mediodepagoController = require("./controller/mediopago");
 const usuariosController = require("./controller/usuarios");
-
+const pedidoController = require("./controller/pedido");
 const app = express();
 
 app.use(cors());
@@ -17,6 +17,7 @@ app.use("/categoria", categoriaController);
 app.use("/producto", productoController);
 app.use("/mediopago", mediodepagoController);
 app.use("/usuarios", usuariosController);
+app.use("/pedido", pedidoController);
 app.use("/login", loginController);
 
 app.use(middleware.unknownEndpoint);
