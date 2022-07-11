@@ -21,7 +21,7 @@ let Usuarios = [{
     },
     {
         id: 4,
-        nombre: "Namu",
+        nombre: "Nanu",
         apellido: "Lamour",
         mail: "nanu@hotmail.com",
         contrasenia: ""
