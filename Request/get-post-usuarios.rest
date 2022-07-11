@@ -1,0 +1,30 @@
+GET http://localhost:8000/usuarios
+
+###
+DELETE http://localhost:8000/usuarios/2
+
+###
+GET http://localhost:8000/usuarios/3
+
+###
+GET http://localhost:8000/usuarios?nombre=maxi
+###
+GET http://localhost:8000/usuarios?apellido=Arias
+###
+GET http://localhost:8000/usuarios?nombre=Jesus&apellido=Arias
+
+###
+GET http://localhost:8000/usuarios
+
+###
+GET http://localhost:8000/usuarios?multinombres=esteban,cristian
+
+###
+GET http://localhost:8000/usuarios?buscar=nanu
+
+###
+GET http://localhost:8000/usuarios?BuscadorMulti=taynah,maxi
+
+###
+GET http://localhost:8000/usuario?multisearch=jesus,ferrari
+
