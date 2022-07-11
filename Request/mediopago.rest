@@ -20,7 +20,7 @@ GET http://localhost:8000/mediopago?multitle=Crypto,PHP
 GET http://localhost:8000/mediopago?search=it
 
 ###
-GET http://localhost:8000/mediopago?multisearch=ola
+GET http://localhost:8000/mediopago?multisearch=yp
 
 
 ###
@@ -38,7 +38,7 @@ Content-Type: application/json
 
 {
   "id": 4,
-  "title" : "Pete"
+  "title" : "Acciones"
 }
 
 ###
@@ -48,7 +48,7 @@ Authorization: Bearer {{ login.response.body.token }}
 
 {
   "id": 6,
-  "title" : "Petereke"
+  "title" : "Acciones"
 }
 
 ### DELETE
