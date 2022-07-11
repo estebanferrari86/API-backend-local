@@ -87,7 +87,7 @@ const getAll = (filter) => {
   let filtrado = Pedido;
 
   if(filter.Pedido){
-    filtrado = filtrado.filter(p => p.Pedido == filter.Pedido)
+    filtrado = filtrado.filter(p => p.Pedido.search(filter.Pedido)> -1)
   }
 
   if(filter.usuario){
@@ -102,6 +102,9 @@ const getAll = (filter) => {
     filtrado = filtrado.filter(p => p.mediopago.search(filter.mediopago) > -1)
   }
 
+  if(filter.total){
+    filtrado = filtrado.filter(p => p.total == filter.total)
+  }
   if(filter.search){
     filtrado = filtrado.filter(p => p.usuario.search(filter.search) > -1 || p.descripcion.search(filter.search) > -1)
   }
