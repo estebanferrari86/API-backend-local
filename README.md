@@ -11,13 +11,16 @@ npm install
 
 Correr aplicacion
 
-nppm start
+npm start
 
 ENDPOINTS
 
 http://localhost:8000/login
+
 http://localhost:8000/categoria
+
 http://localhost:8000/mediopago
+
 http://localhost:8000/producto
 
 Para utilizar posteo con token crear carpeta .env con JWT Token
