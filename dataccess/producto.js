@@ -57,15 +57,7 @@ const getAll = (filter) => {
   }
 
   if(filter.search){
-    filtrado = filtrado.filter(p => p.nombre.search(filter.search) > -1 || p.descripcion.search(filter.search) > -1)
-  }
-
-  if(filter.multisearch){
-    const palabrasABuscar = filter.multisearch.split(',');
-    filtrado = filtrado.filter(entry => { 
-      const filtro = palabrasABuscar.filter(palabra => p.nombre.includes(palabra) || p.modelo.includes(palabra) || p.descripcion.includes(palabra) || p.precio.includes(Number(palabra)))
-      return filtro.length > 0      
-    })
+    filtrado = filtrado.filter(p => (p.nombre.search(filter.search) > -1 || p.descripcion.search(filter.search) > -1))
   }
   
   return filtrado
