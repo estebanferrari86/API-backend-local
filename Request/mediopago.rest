@@ -2,9 +2,6 @@
 GET http://localhost:8000/mediopago/
 
 ###
-GET http://localhost:8000/mediopago/d093da87-796c-4e36-b60a-693a388ce584
-
-###
 GET http://localhost:8000/mediopago/4
 
 ###
