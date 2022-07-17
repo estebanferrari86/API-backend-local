@@ -13,7 +13,9 @@ Correr aplicacion
 
 npm start
 
-ENDPOINTS
+ENDPOINTS & METODOS
+
+GET/POST/PUT/DELETE
 
 http://localhost:8000/login
 
